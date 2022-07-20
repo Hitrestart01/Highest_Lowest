@@ -1,0 +1,51 @@
+package highestlowest;
+
+import java.util.Scanner;
+
+public class HighestLowest 
+{
+    public static void main(String[] args) 
+    {   
+    	
+    	int smallest = Integer.MAX_VALUE;
+    	int largest = Integer.MIN_VALUE;
+    	String c = "";
+    	Scanner input = new Scanner(System.in); 
+    	Scanner input2 = new Scanner(System.in); 
+    	
+    	do
+    	{
+    		
+    		System.out.println("How Many numbers would you like to input?");
+    		int j = input.nextInt(); 
+    	
+    		System.out.printf("Please enter %d numbers %n", j);
+    	
+    			for (int i = 0; i < j; i++)
+    			{ 
+    			
+    				int current = input.nextInt();
+    				if (current > largest)
+    				{ 
+    					largest = current; 
+    				} 
+    				if (current < smallest) 
+    				{ 
+    					smallest = current; 
+    				} 
+    			} 
+    			
+	    	System.out.println("largest number is : " + largest);
+	    	System.out.println("smallest number is : " + smallest);   
+	    	smallest = Integer.MAX_VALUE;
+	    	largest = Integer.MIN_VALUE;
+	    	System.out.println("Do you want to enter another set of numbers? Y/N");
+	    	c = input2.nextLine();
+    	}
+    	while(c.equalsIgnoreCase("Y"));
+    	{
+    		System.out.println("Exit Progrom");
+    	}
+    }
+}
+    		
